@@ -1,0 +1,45 @@
+.welcome-container {
+}
+.text-set {
+  color: white;
+  text-align: center;
+}
+.text-set h1 {
+  font-size: 55px;
+  font-weight: 700 bold;
+}
+.text-set p {
+  font-size: 24px;
+}
+.text-set button {
+  width: 200px;
+  height: 50px;
+  background-color: #048a69;
+  border-color: #048a69;
+  border-radius: 40px;
+}
+#welcome-img-sun {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#welcome-img-sun img {
+  width: 450px;
+}
+@media only screen and (max-width: 600px) {
+  #welcome-img-sun {
+    margin-top: 0px;
+  }
+  #welcome-img-sun img {
+    height: 210px;
+    width: 210px;
+  }
+  .text-set h1 {
+    font-size: 35px;
+    font-weight: 700 bold;
+  }
+  .text-set p {
+    font-size: 15px;
+  }
+}
