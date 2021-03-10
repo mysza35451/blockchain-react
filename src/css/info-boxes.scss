@@ -41,3 +41,19 @@ p {
   margin-top: 25px;
   width: 70px;
 }
+@media all and (max-width: 416px) {
+  .text-box-container {
+    width: 90%;
+    max-height: 240;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .box {
+    position: relative;
+    width: 90%;
+    margin: 10px;
+    height: 340px;
+    background-color: #292c38;
+  }
+}
