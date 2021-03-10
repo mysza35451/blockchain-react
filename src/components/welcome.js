@@ -5,7 +5,7 @@ function Welcome() {
   return (
     <div className="welcome-container">
       <div id="welcome-img-sun">
-        <img src={process.env.PUBLIC_URL + "../img/sun.png"}></img>
+        <img src={process.env.PUBLIC_URL + "/img/sun.png"}></img>
       </div>
       <div className="text-set">
         <h1>The revolution of Solar Panel Technology is here!</h1>

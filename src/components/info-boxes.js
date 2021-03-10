@@ -7,14 +7,14 @@ function InfoBoxes() {
       <div className="box">
         <img
           className="line-box-img-1"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <img
           className="line-box-img-2"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <div className="text-box-container">
-          <img src={process.env.PUBLIC_URL + "../img/electricity.png"}></img>
+          <img src={process.env.PUBLIC_URL + "/img/electricity.png"}></img>
           <h1>Sell the Electricity!</h1>
           <p>
             Turn the excess power generated into VoltToken, and redeem it or
@@ -26,14 +26,14 @@ function InfoBoxes() {
       <div className="box">
         <img
           className="line-box-img-1"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <img
           className="line-box-img-2"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <div className="text-box-container">
-          <img src={process.env.PUBLIC_URL + "../img/environment.png"}></img>
+          <img src={process.env.PUBLIC_URL + "/img/environment.png"}></img>
           <h1>Help the environment!</h1>
           <p>
             We promote solar energy and electric cars, join us on the journey to
@@ -45,18 +45,18 @@ function InfoBoxes() {
       <div className="box">
         <img
           className="line-box-img-1"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <img
           className="line-box-img-2"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <div className="text-box-container">
-          <img src={process.env.PUBLIC_URL + "../img/sun2.png"}></img>
+          <img src={process.env.PUBLIC_URL + "/img/sun2.png"}></img>
           <h1>It shines all day!</h1>
           <p>
             Even when you are working long shifts the sun doesn't stop to shine!
-            Why not benefit and generate extra power?
+            Why not benefit
           </p>
         </div>
       </div>
@@ -64,14 +64,14 @@ function InfoBoxes() {
       <div className="box">
         <img
           className="line-box-img-1"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <img
           className="line-box-img-2"
-          src={process.env.PUBLIC_URL + "../img/line.svg"}
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
         ></img>
         <div className="text-box-container">
-          <img src={process.env.PUBLIC_URL + "../img/code.png"}></img>
+          <img src={process.env.PUBLIC_URL + "/img/code.png"}></img>
           <h1>Contribute by Coding</h1>
           <p>
             We are growing as you are reading this, but we cannot do it alone...
