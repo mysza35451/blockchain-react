@@ -1,0 +1,43 @@
+.info-boxes {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box {
+  position: relative;
+  width: 400px;
+  margin: 10px;
+  height: 250px;
+  background-color: #292c38;
+}
+.line-box-img-1 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.line-box-img-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.text-box-container {
+  width: 400px;
+  max-height: 240;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.text-box-container h1,
+p {
+  margin: 5px;
+  color: white;
+  text-align: center;
+}
+.text-box-container img {
+  margin-top: 25px;
+  width: 70px;
+}
