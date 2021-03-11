@@ -59,9 +59,40 @@ p {
   width: 70px;
 }
 
+.title-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80%;
+  height: 200px;
+  background-color: #292c38;
+  margin-bottom: 10px;
+}
+
+.title-box h1 {
+  text-align: center;
+  font-size: 42px;
+  width: 100%;
+  margin: auto;
+  color: white;
+  text-decoration: underline;
+}
+
 @media all and (max-width: 416px) {
   .text-box-container {
-    width: 90%;
+    margin-top: 3 0px;
+    width: 350px;
     max-height: 240;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -76,10 +107,17 @@ p {
   }
   .box {
     position: relative;
-    width: 90%;
+    width: 350px;
     margin: 10px;
     height: 340px;
     background-color: #292c38;
+  }
+  .title-box {
+    width: 95%;
+    height: 100px;
+  }
+  .title-box h1 {
+    font-size: 33px;
   }
 }
 /*# sourceMappingURL=info-boxes.css.map */

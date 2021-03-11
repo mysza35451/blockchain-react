@@ -1,5 +1,5 @@
 .welcome-container {
-  height: 100vh;
+  height: 90vh;
 }
 
 .text-set {
@@ -53,6 +53,9 @@
   }
   .text-set p {
     font-size: 15px;
+  }
+  .title-box {
+    height: 100px;
   }
 }
 /*# sourceMappingURL=welcome.css.map */

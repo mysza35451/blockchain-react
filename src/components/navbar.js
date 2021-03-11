@@ -19,12 +19,10 @@ function Navbar() {
       <nav>
         <ul className="menu">
           <li className="logo">
-            <a href="#" className="logo1">
-              VOLT
-            </a>
-            <a href="" className="logo2">
-              token
-            </a>
+            <img
+              id="logo-mobile"
+              src={process.env.PUBLIC_URL + "/img/volttoken-icon.png"}
+            ></img>
           </li>
           <li className="item">
             <a href="index.html">Home</a>

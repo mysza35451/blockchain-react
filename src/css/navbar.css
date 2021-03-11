@@ -16,22 +16,14 @@ a:hover {
   font-weight: 700;
 }
 
-.logo a:hover {
-  text-decoration: none;
+.logo img {
+  height: 10vh;
 }
 
 .menu li {
   font-size: 16px;
   padding: 15px 5px;
   white-space: nowrap;
-}
-
-.logo1 {
-  color: #048a69;
-}
-
-.logo2 {
-  color: #f27304;
 }
 
 .logo a,
@@ -41,6 +33,11 @@ a:hover {
 
 .button.secondary {
   border-bottom: 1px #444 solid;
+}
+
+#logo-mobile {
+  width: 75px;
+  height: auto;
 }
 
 /* Mobile menu */
@@ -119,7 +116,11 @@ a:hover {
 }
 
 /* Tablet menu */
-@media all and (min-width: 552px) {
+@media all and (min-width: 645px) {
+  #logo-mobile {
+    width: 100px;
+    height: auto;
+  }
   .menu {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
@@ -169,7 +170,10 @@ a:hover {
 }
 
 /* Desktop menu */
-@media all and (min-width: 768px) {
+@media all and (min-width: 1030px) {
+  #logo-mobile {
+    width: 100px;
+  }
   .item {
     display: block;
     width: auto;

@@ -4,6 +4,17 @@ import "../css/info-boxes.css";
 function InfoBoxes() {
   return (
     <div className="info-boxes">
+      <div className=" title-box">
+        <img
+          className="line-box-img-1"
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
+        ></img>
+        <img
+          className="line-box-img-2"
+          src={process.env.PUBLIC_URL + "/img/line.svg"}
+        ></img>
+        <h1>What do we offer?</h1>
+      </div>
       <div className="box">
         <img
           className="line-box-img-1"
