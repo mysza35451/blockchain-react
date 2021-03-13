@@ -1,5 +1,9 @@
 import React from "react";
 import "../css/navbar.css";
+import {Link} from "react-router-dom";
+
+
+
 function Navbar() {
   let toggleBars = () => {
     let query = document.querySelectorAll(".item");
@@ -19,13 +23,15 @@ function Navbar() {
       <nav>
         <ul className="menu">
           <li className="logo">
+            
             <img
               id="logo-mobile"
               src={process.env.PUBLIC_URL + "/img/volttoken-icon.png"}
             ></img>
           </li>
           <li className="item">
-            <a href="index.html">Home</a>
+    
+            <Link to="/">Home</Link>
           </li>
           <li className="item ">
             <a href="">How It Works</a>
@@ -41,7 +47,9 @@ function Navbar() {
           </li>
 
           <li className="item button" id="get-modal">
-            <a href="#">Log In / Sign Up</a>
+          <Link to="/sign-up-in">Log In / Sign Up</Link>
+
+            
           </li>
           <li className="item button">
             <a href="#">Buy VOLT</a>

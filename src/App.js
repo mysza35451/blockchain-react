@@ -1,22 +1,16 @@
 import "./App.css";
-import Navbar from "./components/navbar";
-import Welcome from "./components/welcome";
-import InfoBoxes from "./components/info-boxes";
-import Footer from "./components/footer";
-import Latest from "./components/blog";
+import Home from "./components/home";
+import SignInUp from "./components/signinup";
 
 import React from "react";
+import {Route, Link} from "react-router-dom";
 
 function App() {
   return (
-    <div className="website-content">
-      <Navbar />
-      <Welcome />
-      <div className="page-contents">
-        <InfoBoxes />
-        <Latest />
-      </div>
-      <Footer />
+    <div className="App">
+      <Route exact path="/" component={Home}/>
+      <Route exact path="/sign-up-in" component={SignInUp}/>
+
     </div>
   );
 }
