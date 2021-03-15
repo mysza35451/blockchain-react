@@ -47,7 +47,7 @@ function Navbar() {
           </li>
 
           <li className="item button" id="get-modal">
-          <Link to="/sign-up-in">Log In / Sign Up</Link>
+          <Link to="/account">My Account</Link>
 
             
           </li>
