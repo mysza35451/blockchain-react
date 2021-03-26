@@ -11,12 +11,22 @@ class SignInUp extends Component{
  
 
 state = {
+  isLoggedIn: false,
   isSignUp : true,
   isSignIn : false
 }
 
+checkIfLoggedIn() {
+  if(sessionStorage.getItem("currentUser")){
+    this.isLoggedIn = true;
+    console.log(true)
+  }
+  
+}
 
-
+componentWillMount() {
+this.checkIfLoggedIn();
+}
 
 
 
@@ -40,16 +50,47 @@ render(){
       .then((responseJSON) => {
         console.log("Success:", responseJSON);
         if(responseJSON == true){
-          alert("success")
+          alert("Success, please log in!")
+          this.isSignUp = false;
+          this.isSignIn = true;
         }
       });
+};
+
+let signInToAccount = () => {
+  let username = document.getElementById("signin-username").value;
+  let password = document.getElementById("signin-password").value;
+  let accountData = {username: username, password: password};
+
+
+  const optionsPOST= {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(accountData)
+    
+    };
+
+    console.log(accountData)
+    fetch("http://localhost:9000/account-login/users", optionsPOST).then((response) => response.json())
+    .then((responseJSON) => {
+      console.log("Success:", responseJSON);
+      if(responseJSON == true){
+        let sessionArray = {username : username}
+        console.log("AAAAAAAAAAAA",sessionArray);
+        sessionStorage.setItem("currentUser", username);
+        this.isLoggedIn = true;
+      }
+
+    });
 };
   return (
     
     <div className="website-content">
       <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'></link>
       <Navbar />
-      
+      <div className={this.state.isLoggedIn ? "display-none" : ""}> 
       <div className="login">
             <div className="login__content">
                 <div className="login__img">
@@ -62,17 +103,17 @@ render(){
     
                         <div className="login__box">
                             <i className='bx bx-user login__icon'></i>
-                            <input type="text" placeholder="Username" className="login__input"/>
+                            <input id="signin-username" type="text" placeholder="Username" className="login__input"/>
                         </div>
     
                         <div className="login__box">
                             <i className='bx bx-lock-alt login__icon'></i>
-                            <input type="password" placeholder="Password" className="login__input"/>
+                            <input id="signin-password" type="password" placeholder="Password" className="login__input"/>
                         </div>
 
                         <a href="#" className="login__forgot">Forgot password?</a>
 
-                        <a href="#" className="login__button">Sign In</a>
+                        <a onClick={signInToAccount} href="#" className="login__button">Sign In</a>
 
                         <div>
                             <span className="login__account">Don't have an Account ?</span>
@@ -114,7 +155,7 @@ render(){
                 </div>
             </div>
         </div>
-
+        </div>
 
       <Footer />
     </div>

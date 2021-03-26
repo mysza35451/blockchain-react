@@ -136,6 +136,47 @@ console.log(JSON.stringify(voltToken, null, 4));
 
 //API requests
 
+//post request to add an user to the DB
+app.post("/account/:collectionName", (request, response, next) => {
+  let registerArray;
+
+  let password = request.body.password;
+  bcrypt.hash(password, saltRounds, (err, hash) => {
+    registerArray = {email: request.body.email, username: request.body.username}
+  });
+  request.collection
+    .find({ username: request.body.username })
+    .toArray((e, results) => {
+      if (!results.length == 0) {
+        console.log("Already exists");
+        response.send(false);
+      } else {
+        console.log("added to db");
+
+        request.collection.insertOne(request.body, (e, results) => {
+          console.log(request.body);
+          if (e) return next(e);
+          response.send(true);
+        });
+      }
+      console.log(results);
+    });
+});
+
+app.post("/account-login/:collectionName", (request, response) => {
+  let userData = request.body;
+  console.log(userData);
+  request.collection.find(userData).toArray((e, results) => {
+    if (e) return next(e);
+    response.setHeader("Access-Control-Allow-Origin", "*");
+    if(!results.length == 0){
+      response.send(true);
+    }
+    else{
+      response.send(false);
+    }
+  });
+});
 
 
 //listen on following port
